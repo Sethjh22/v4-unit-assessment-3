@@ -12,7 +12,7 @@ class App extends Component {
   constructor(){
     super()
     this.state={
-      books: books,
+      books,
       theShelf: []
     }
     this.addToShelf = this.addToShelf.bind(this)
@@ -23,7 +23,7 @@ class App extends Component {
 
   addToShelf(val){
     // const newShelf = this.state.theShelf.push(val)
-    this.setState({theShelf: [...val]})
+    this.setState({theShelf: [val]})
   }
 
   clearShelf(){
@@ -31,7 +31,7 @@ class App extends Component {
   }
   filterBooks(input){
     const filteredBooks = this.state.books.filter((e)=>{
-      return e.title.indexOf(input) 
+      return !e.title.indexOf(input)
     })
     this.setState({books: filteredBooks})
   }

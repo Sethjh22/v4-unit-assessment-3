@@ -5,7 +5,7 @@ class Shelf extends Component{
 
     render(){
         let mappedTitles = this.props.theShelf.map((e, i)=>{
-            return <h2 key={i}>{e.title}</h2>
+            return <h2 key={i}>{e}</h2>
         })
         
         return(

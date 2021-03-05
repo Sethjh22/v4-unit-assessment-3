@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 
+
 class BookList extends Component{
 
     handleAddToShelf(e){
@@ -9,10 +10,10 @@ class BookList extends Component{
     render(){
         
         let mappedBooks = this.props.books.map((e, i)=> {
-            return <section key={i}><img src={e.img} onClick={(e)=>this.handleAddToShelf(e)}/><h2>{e.title} by {e.author}</h2></section>
+            return <section key={i}><img className="books"src={e.img} onClick={(e)=>this.handleAddToShelf(e)}/><h2 className='titleAuthor'>{e.title} by {e.author}</h2></section>
         })
         return(
-            <div>{mappedBooks}</div>
+            <div className='listOfBooks'>{mappedBooks}</div>
         )
     }
 }
