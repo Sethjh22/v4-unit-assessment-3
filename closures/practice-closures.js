@@ -124,7 +124,7 @@ bathroomSwitch()
       readProducts: function(){
         return products
       },
-      addToProduct: function(str){
+      addToProducts: function(str){
         products.push(str)
       },
       deleteFromProducts: function(str){
@@ -146,6 +146,6 @@ bathroomSwitch()
   */
 
   //CODE HERE
-  shoes.addToProduct('confusion')
+  shoes.addToProducts('confusion')
 
 
